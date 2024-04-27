@@ -1,0 +1,47 @@
+[2024-03-25T16:25:46.105+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retail_dag.send_retail_to_dataset manual__2024-03-25T16:09:30.717735+00:00 [queued]>
+[2024-03-25T16:25:46.123+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retail_dag.send_retail_to_dataset manual__2024-03-25T16:09:30.717735+00:00 [queued]>
+[2024-03-25T16:25:46.124+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 2
+[2024-03-25T16:25:46.150+0000] {taskinstance.py:2217} INFO - Executing <Task(GCSToBigQueryOperator): send_retail_to_dataset> on 2024-03-25 16:09:30.717735+00:00
+[2024-03-25T16:25:46.163+0000] {standard_task_runner.py:60} INFO - Started process 1361 to run task
+[2024-03-25T16:25:46.170+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'retail_dag', 'send_retail_to_dataset', 'manual__2024-03-25T16:09:30.717735+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/retail.py', '--cfg-path', '/tmp/tmpjvxvvduf']
+[2024-03-25T16:25:46.174+0000] {standard_task_runner.py:88} INFO - Job 28: Subtask send_retail_to_dataset
+[2024-03-25T16:25:46.257+0000] {task_command.py:423} INFO - Running <TaskInstance: retail_dag.send_retail_to_dataset manual__2024-03-25T16:09:30.717735+00:00 [running]> on host b77f7ef9c21f
+[2024-03-25T16:25:46.421+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retail_dag' AIRFLOW_CTX_TASK_ID='send_retail_to_dataset' AIRFLOW_CTX_EXECUTION_DATE='2024-03-25T16:09:30.717735+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-25T16:09:30.717735+00:00'
+[2024-03-25T16:25:46.440+0000] {connection.py:269} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-03-25T16:25:46.442+0000] {base.py:83} INFO - Using connection ID 'gcp' for task execution.
+[2024-03-25T16:25:46.445+0000] {gcs_to_bigquery.py:379} INFO - Using existing BigQuery table for storing data...
+[2024-03-25T16:25:46.533+0000] {gcs_to_bigquery.py:383} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': '***-tutorial-418113', 'datasetId': '***-tutorial-418113', 'tableId': 'retail'}, 'sourceFormat': 'CSV', 'sourceUris': ['gs://marco_***_online_retail/raw/online_retail.csv'], 'writeDisposition': 'WRITE_TRUNCATE', 'ignoreUnknownValues': False, 'schema': {'fields': [{'name': 'InvoiceNo', 'type': 'STRING'}, {'name': 'StockCode', 'type': 'STRING'}, {'name': 'Description', 'type': 'TEXT', 'mode': 'NULLABLE'}, {'name': 'Quantity', 'type': 'INTEGER'}, {'name': 'InvoiceDate', 'type': 'DATETIME'}, {'name': 'UnitPrice', 'type': 'FLOAT'}, {'name': 'CustomerID', 'type': 'FLOAT', 'mode': 'NULLABLE'}, {'name': 'Country', 'type': 'STRING'}]}, 'skipLeadingRows': 1, 'fieldDelimiter': ',', 'quote': None, 'allowQuotedNewlines': 'true', 'encoding': 'UTF-8'}}
+[2024-03-25T16:25:46.536+0000] {bigquery.py:1612} INFO - Inserting job ***_retail_dag_send_retail_to_dataset_2024_03_25T16_09_30_717735_00_00_a545aecf84880fdf59059bf7360ae2de
+[2024-03-25T16:25:47.610+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 384, in execute
+    job: BigQueryJob | UnknownJob = self._submit_job(self.hook, job_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 306, in _submit_job
+    return hook.insert_job(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/common/hooks/base_google.py", line 485, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 1615, in insert_job
+    job_api_repr._begin()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/base.py", line 740, in _begin
+    api_response = client._call_api(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 827, in _call_api
+    return call()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.BadRequest: 400 POST https://bigquery.googleapis.com/bigquery/v2/projects/airflow-tutorial-418113/jobs?prettyPrint=false: Invalid value for type: TEXT is not a valid value
+[2024-03-25T16:25:47.641+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=retail_dag, task_id=send_retail_to_dataset, execution_date=20240325T160930, start_date=20240325T162546, end_date=20240325T162547
+[2024-03-25T16:25:47.669+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 28 for task send_retail_to_dataset (400 POST https://bigquery.googleapis.com/bigquery/v2/projects/airflow-tutorial-418113/jobs?prettyPrint=false: Invalid value for type: TEXT is not a valid value; 1361)
+[2024-03-25T16:25:47.710+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-03-25T16:25:47.743+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

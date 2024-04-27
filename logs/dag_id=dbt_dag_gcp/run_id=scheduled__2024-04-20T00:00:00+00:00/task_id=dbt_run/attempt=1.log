@@ -1,0 +1,38 @@
+[2024-04-21T01:17:05.326+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_dag_gcp.dbt_run scheduled__2024-04-20T00:00:00+00:00 [queued]>
+[2024-04-21T01:17:05.356+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_dag_gcp.dbt_run scheduled__2024-04-20T00:00:00+00:00 [queued]>
+[2024-04-21T01:17:05.357+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-21T01:17:05.393+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): dbt_run> on 2024-04-20 00:00:00+00:00
+[2024-04-21T01:17:05.403+0000] {standard_task_runner.py:60} INFO - Started process 1436 to run task
+[2024-04-21T01:17:05.408+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dbt_dag_gcp', 'dbt_run', 'scheduled__2024-04-20T00:00:00+00:00', '--job-id', '249', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dag.py', '--cfg-path', '/tmp/tmp6c6_o0ib']
+[2024-04-21T01:17:05.411+0000] {standard_task_runner.py:88} INFO - Job 249: Subtask dbt_run
+[2024-04-21T01:17:05.501+0000] {task_command.py:423} INFO - Running <TaskInstance: dbt_dag_gcp.dbt_run scheduled__2024-04-20T00:00:00+00:00 [running]> on host cead0b1f6896
+[2024-04-21T01:17:05.657+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_dag_gcp' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2024-04-20T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-20T00:00:00+00:00'
+[2024-04-21T01:17:05.659+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-04-21T01:17:05.663+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dags/dbt/***_dbt_gcp && dbt run --profiles-dir .']
+[2024-04-21T01:17:05.695+0000] {subprocess.py:86} INFO - Output:
+[2024-04-21T01:17:12.592+0000] {subprocess.py:93} INFO - [0m01:17:12  Running with dbt=1.7.10
+[2024-04-21T01:17:14.380+0000] {subprocess.py:93} INFO - [0m01:17:14  Registered adapter: bigquery=1.7.6
+[2024-04-21T01:17:14.499+0000] {subprocess.py:93} INFO - [0m01:17:14  Found 5 models, 10 tests, 1 source, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[2024-04-21T01:17:14.503+0000] {subprocess.py:93} INFO - [0m01:17:14
+[2024-04-21T01:17:16.362+0000] {subprocess.py:93} INFO - [0m01:17:16  Concurrency: 2 threads (target='dev')
+[2024-04-21T01:17:16.363+0000] {subprocess.py:93} INFO - [0m01:17:16
+[2024-04-21T01:17:16.369+0000] {subprocess.py:93} INFO - [0m01:17:16  1 of 5 START sql table model retail.dim_stock .................................. [RUN]
+[2024-04-21T01:17:16.370+0000] {subprocess.py:93} INFO - [0m01:17:16  2 of 5 START sql table model retail.fact_purchase .............................. [RUN]
+[2024-04-21T01:17:20.416+0000] {subprocess.py:93} INFO - [0m01:17:20  1 of 5 OK created sql table model retail.dim_stock ............................. [[32mCREATE TABLE (4.1k rows, 3.7 MiB processed)[0m in 4.04s]
+[2024-04-21T01:17:20.421+0000] {subprocess.py:93} INFO - [0m01:17:20  3 of 5 START sql table model retail.my_first_dbt_model ......................... [RUN]
+[2024-04-21T01:17:21.538+0000] {subprocess.py:93} INFO - [0m01:17:21  2 of 5 OK created sql table model retail.fact_purchase ......................... [[32mCREATE TABLE (406.8k rows, 15.0 MiB processed)[0m in 5.16s]
+[2024-04-21T01:17:21.543+0000] {subprocess.py:93} INFO - [0m01:17:21  4 of 5 START sql view model retail_finance.revenue_by_day ...................... [RUN]
+[2024-04-21T01:17:23.405+0000] {subprocess.py:93} INFO - [0m01:17:23  4 of 5 OK created sql view model retail_finance.revenue_by_day ................. [[32mCREATE VIEW (0 processed)[0m in 1.86s]
+[2024-04-21T01:17:23.880+0000] {subprocess.py:93} INFO - [0m01:17:23  3 of 5 OK created sql table model retail.my_first_dbt_model .................... [[32mCREATE TABLE (1.0 rows, 0 processed)[0m in 3.46s]
+[2024-04-21T01:17:23.886+0000] {subprocess.py:93} INFO - [0m01:17:23  5 of 5 START sql view model retail.my_second_dbt_model ......................... [RUN]
+[2024-04-21T01:17:25.602+0000] {subprocess.py:93} INFO - [0m01:17:25  5 of 5 OK created sql view model retail.my_second_dbt_model .................... [[32mCREATE VIEW (0 processed)[0m in 1.71s]
+[2024-04-21T01:17:25.609+0000] {subprocess.py:93} INFO - [0m01:17:25
+[2024-04-21T01:17:25.610+0000] {subprocess.py:93} INFO - [0m01:17:25  Finished running 3 table models, 2 view models in 0 hours 0 minutes and 11.11 seconds (11.11s).
+[2024-04-21T01:17:25.637+0000] {subprocess.py:93} INFO - [0m01:17:25
+[2024-04-21T01:17:25.638+0000] {subprocess.py:93} INFO - [0m01:17:25  [32mCompleted successfully[0m
+[2024-04-21T01:17:25.639+0000] {subprocess.py:93} INFO - [0m01:17:25
+[2024-04-21T01:17:25.640+0000] {subprocess.py:93} INFO - [0m01:17:25  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[2024-04-21T01:17:28.292+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-04-21T01:17:28.331+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dbt_dag_gcp, task_id=dbt_run, execution_date=20240420T000000, start_date=20240421T011705, end_date=20240421T011728
+[2024-04-21T01:17:28.392+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-21T01:17:28.421+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

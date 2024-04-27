@@ -1,0 +1,15 @@
+airflow_dbt_gcp:
+  outputs:
+    dev:
+      dataset: retail
+      job_execution_timeout_seconds: 500
+      job_retries: 1
+      keyfile: /opt/airflow/include/gcp/service_account.json
+      # keyfile: /root/project/airflow-project/include/gcp/service_account.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: airflow-tutorial-418113
+      threads: 2
+      type: bigquery
+  target: dev

@@ -1,0 +1,59 @@
+[2024-04-20T21:51:43.209+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_dag_gcp.dbt_run manual__2024-04-20T21:51:38.100744+00:00 [queued]>
+[2024-04-20T21:51:43.231+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_dag_gcp.dbt_run manual__2024-04-20T21:51:38.100744+00:00 [queued]>
+[2024-04-20T21:51:43.232+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-20T21:51:43.266+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): dbt_run> on 2024-04-20 21:51:38.100744+00:00
+[2024-04-20T21:51:43.276+0000] {standard_task_runner.py:60} INFO - Started process 847 to run task
+[2024-04-20T21:51:43.280+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dbt_dag_gcp', 'dbt_run', 'manual__2024-04-20T21:51:38.100744+00:00', '--job-id', '244', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dag.py', '--cfg-path', '/tmp/tmpwslyatgs']
+[2024-04-20T21:51:43.284+0000] {standard_task_runner.py:88} INFO - Job 244: Subtask dbt_run
+[2024-04-20T21:51:43.371+0000] {task_command.py:423} INFO - Running <TaskInstance: dbt_dag_gcp.dbt_run manual__2024-04-20T21:51:38.100744+00:00 [running]> on host cead0b1f6896
+[2024-04-20T21:51:43.535+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_dag_gcp' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2024-04-20T21:51:38.100744+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-20T21:51:38.100744+00:00'
+[2024-04-20T21:51:43.538+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-04-20T21:51:43.540+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dags/dbt/***_dbt_gcp && dbt run --profiles-dir .']
+[2024-04-20T21:51:43.565+0000] {subprocess.py:86} INFO - Output:
+[2024-04-20T21:51:51.614+0000] {subprocess.py:93} INFO - [0m21:51:51  Running with dbt=1.7.10
+[2024-04-20T21:51:56.084+0000] {subprocess.py:93} INFO - [0m21:51:56  Registered adapter: bigquery=1.7.6
+[2024-04-20T21:51:56.173+0000] {subprocess.py:93} INFO - [0m21:51:56  Unable to do partial parsing because profile has changed
+[2024-04-20T21:51:59.994+0000] {subprocess.py:93} INFO - [0m21:51:59  [[33mWARNING[0m]: Did not find matching node for patch with name 'fact_purchase.sql' in the 'models' section of file 'models/silver/schema.yml'
+[2024-04-20T21:52:00.431+0000] {subprocess.py:93} INFO - [0m21:52:00  [[33mWARNING[0m]: Test 'test.***_dbt_gcp.unique_fact_purchase.sql_StockCode.2cb6136218' (models/silver/schema.yml) depends on a node named 'fact_purchase.sql' in package '' which was not found
+[2024-04-20T21:52:00.433+0000] {subprocess.py:93} INFO - [0m21:52:00  [[33mWARNING[0m]: Test 'test.***_dbt_gcp.not_null_fact_purchase.sql_StockCode.71d40cb837' (models/silver/schema.yml) depends on a node named 'fact_purchase.sql' in package '' which was not found
+[2024-04-20T21:52:00.435+0000] {subprocess.py:93} INFO - [0m21:52:00  [[33mWARNING[0m]: Test 'test.***_dbt_gcp.not_null_fact_purchase.sql_CustomerID.c72a9ff2a7' (models/silver/schema.yml) depends on a node named 'fact_purchase.sql' in package '' which was not found
+[2024-04-20T21:52:00.437+0000] {subprocess.py:93} INFO - [0m21:52:00  [[33mWARNING[0m]: Test 'test.***_dbt_gcp.not_null_fact_purchase.sql_InvoiceDate.04bd2a652d' (models/silver/schema.yml) depends on a node named 'fact_purchase.sql' in package '' which was not found
+[2024-04-20T21:52:00.640+0000] {subprocess.py:93} INFO - [0m21:52:00  Found 5 models, 10 tests, 1 source, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[2024-04-20T21:52:00.646+0000] {subprocess.py:93} INFO - [0m21:52:00
+[2024-04-20T21:52:03.012+0000] {subprocess.py:93} INFO - [0m21:52:03  Concurrency: 2 threads (target='dev')
+[2024-04-20T21:52:03.014+0000] {subprocess.py:93} INFO - [0m21:52:03
+[2024-04-20T21:52:03.029+0000] {subprocess.py:93} INFO - [0m21:52:03  1 of 5 START sql table model retail.dim_stock .................................. [RUN]
+[2024-04-20T21:52:03.031+0000] {subprocess.py:93} INFO - [0m21:52:03  2 of 5 START sql table model retail.fact_purchase .............................. [RUN]
+[2024-04-20T21:52:07.504+0000] {subprocess.py:93} INFO - [0m21:52:07  1 of 5 OK created sql table model retail.dim_stock ............................. [[32mCREATE TABLE (4.1k rows, 3.7 MiB processed)[0m in 4.47s]
+[2024-04-20T21:52:07.510+0000] {subprocess.py:93} INFO - [0m21:52:07  3 of 5 START sql table model retail.my_first_dbt_model ......................... [RUN]
+[2024-04-20T21:52:08.793+0000] {subprocess.py:93} INFO - [0m21:52:08  2 of 5 OK created sql table model retail.fact_purchase ......................... [[32mCREATE TABLE (406.8k rows, 15.0 MiB processed)[0m in 5.76s]
+[2024-04-20T21:52:08.800+0000] {subprocess.py:93} INFO - [0m21:52:08  4 of 5 START sql view model retail_finance.revenue_by_day ...................... [RUN]
+[2024-04-20T21:52:11.352+0000] {subprocess.py:93} INFO - [0m21:52:11  3 of 5 OK created sql table model retail.my_first_dbt_model .................... [[32mCREATE TABLE (1.0 rows, 0 processed)[0m in 3.84s]
+[2024-04-20T21:52:11.359+0000] {subprocess.py:93} INFO - [0m21:52:11  5 of 5 START sql view model retail.my_second_dbt_model ......................... [RUN]
+[2024-04-20T21:52:12.265+0000] {subprocess.py:93} INFO - [0m21:52:12  BigQuery adapter: https://console.cloud.google.com/bigquery?project=***-tutorial-418113&j=bq:US:f92659ef-1999-40fb-b73c-f3f6a37c436c&page=queryresults
+[2024-04-20T21:52:12.289+0000] {subprocess.py:93} INFO - [0m21:52:12  4 of 5 ERROR creating sql view model retail_finance.revenue_by_day ............. [[31mERROR[0m in 3.49s]
+[2024-04-20T21:52:13.408+0000] {subprocess.py:93} INFO - [0m21:52:13  5 of 5 OK created sql view model retail.my_second_dbt_model .................... [[32mCREATE VIEW (0 processed)[0m in 2.04s]
+[2024-04-20T21:52:13.427+0000] {subprocess.py:93} INFO - [0m21:52:13
+[2024-04-20T21:52:13.429+0000] {subprocess.py:93} INFO - [0m21:52:13  Finished running 3 table models, 2 view models in 0 hours 0 minutes and 12.78 seconds (12.78s).
+[2024-04-20T21:52:13.469+0000] {subprocess.py:93} INFO - [0m21:52:13
+[2024-04-20T21:52:13.470+0000] {subprocess.py:93} INFO - [0m21:52:13  [31mCompleted with 1 error and 0 warnings:[0m
+[2024-04-20T21:52:13.472+0000] {subprocess.py:93} INFO - [0m21:52:13
+[2024-04-20T21:52:13.475+0000] {subprocess.py:93} INFO - [0m21:52:13    Database Error in model revenue_by_day (models/gold/revenue_by_day.sql)
+[2024-04-20T21:52:13.476+0000] {subprocess.py:93} INFO -   Unrecognized name: purchase_date at [13:7]
+[2024-04-20T21:52:13.476+0000] {subprocess.py:93} INFO -   compiled Code at target/run/***_dbt_gcp/models/gold/revenue_by_day.sql
+[2024-04-20T21:52:13.477+0000] {subprocess.py:93} INFO - [0m21:52:13
+[2024-04-20T21:52:13.479+0000] {subprocess.py:93} INFO - [0m21:52:13  Done. PASS=4 WARN=0 ERROR=1 SKIP=0 TOTAL=5
+[2024-04-20T21:52:15.883+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-04-20T21:52:15.905+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-04-20T21:52:15.912+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=dbt_dag_gcp, task_id=dbt_run, execution_date=20240420T215138, start_date=20240420T215143, end_date=20240420T215215
+[2024-04-20T21:52:15.942+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 244 for task dbt_run (Bash command failed. The command returned a non-zero exit code 1.; 847)
+[2024-04-20T21:52:15.971+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-20T21:52:16.014+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

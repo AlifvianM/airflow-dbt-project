@@ -1,0 +1,18 @@
+[2024-03-25T17:38:21.663+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retail_dag.create_retail_dataset manual__2024-03-25T17:37:35.339619+00:00 [queued]>
+[2024-03-25T17:38:21.674+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retail_dag.create_retail_dataset manual__2024-03-25T17:37:35.339619+00:00 [queued]>
+[2024-03-25T17:38:21.674+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-25T17:38:21.689+0000] {taskinstance.py:2217} INFO - Executing <Task(BigQueryCreateEmptyDatasetOperator): create_retail_dataset> on 2024-03-25 17:37:35.339619+00:00
+[2024-03-25T17:38:21.699+0000] {standard_task_runner.py:60} INFO - Started process 2570 to run task
+[2024-03-25T17:38:21.701+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'retail_dag', 'create_retail_dataset', 'manual__2024-03-25T17:37:35.339619+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/retail.py', '--cfg-path', '/tmp/tmpn0bc3p5z']
+[2024-03-25T17:38:21.703+0000] {standard_task_runner.py:88} INFO - Job 41: Subtask create_retail_dataset
+[2024-03-25T17:38:21.743+0000] {task_command.py:423} INFO - Running <TaskInstance: retail_dag.create_retail_dataset manual__2024-03-25T17:37:35.339619+00:00 [running]> on host b77f7ef9c21f
+[2024-03-25T17:38:21.822+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retail_dag' AIRFLOW_CTX_TASK_ID='create_retail_dataset' AIRFLOW_CTX_EXECUTION_DATE='2024-03-25T17:37:35.339619+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-25T17:37:35.339619+00:00'
+[2024-03-25T17:38:21.831+0000] {connection.py:269} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-03-25T17:38:21.832+0000] {base.py:83} INFO - Using connection ID 'gcp' for task execution.
+[2024-03-25T17:38:21.872+0000] {bigquery.py:469} INFO - datasetId was not specified in `dataset_reference`. Will use default value retail.
+[2024-03-25T17:38:21.872+0000] {bigquery.py:469} INFO - projectId was not specified in `dataset_reference`. Will use default value ***-tutorial-418113.
+[2024-03-25T17:38:21.872+0000] {bigquery.py:480} INFO - Creating dataset: retail in project: ***-tutorial-418113 
+[2024-03-25T17:38:22.597+0000] {bigquery.py:2042} INFO - Dataset retail already exists.
+[2024-03-25T17:38:22.618+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=retail_dag, task_id=create_retail_dataset, execution_date=20240325T173735, start_date=20240325T173821, end_date=20240325T173822
+[2024-03-25T17:38:22.677+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-25T17:38:22.697+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,20 @@
+
+version: 2
+
+models:
+  - name: revenue_by_day
+    description: "Revenue by day in sum"
+    columns:
+      - name: date_purchase
+        description: "date purchase"
+        tests:
+          - unique
+          - not_null
+      - name: total_order
+        description: "total order per date"
+        tests:
+          - not_null
+      - name: total_price
+        description: "total price per date"
+        tests:
+          - not_null

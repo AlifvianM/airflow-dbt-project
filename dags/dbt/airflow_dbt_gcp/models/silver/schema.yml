@@ -1,0 +1,31 @@
+
+version: 2
+
+models:
+  - name: dim_stock
+    description: "All unique product"
+    columns:
+      - name: StockCode
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_purchase.sql
+    description: "All fact of purchase"
+    columns:
+      - name: StockCode
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: CustomerID
+        description: "Foreign key of Customer"
+        tests:
+          - not_null
+      - name: InvoiceDate
+        description: "Date of invoice made"
+        tests:
+          - not_null
+      - name: quantity
+        description: "total quantity of purchased items"

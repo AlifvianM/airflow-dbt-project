@@ -1,0 +1,59 @@
+[2024-04-20T21:14:53.470+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_dag_gcp.dbt_run manual__2024-04-20T21:14:46.414433+00:00 [queued]>
+[2024-04-20T21:14:53.499+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_dag_gcp.dbt_run manual__2024-04-20T21:14:46.414433+00:00 [queued]>
+[2024-04-20T21:14:53.500+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-20T21:14:53.556+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): dbt_run> on 2024-04-20 21:14:46.414433+00:00
+[2024-04-20T21:14:53.571+0000] {standard_task_runner.py:60} INFO - Started process 244 to run task
+[2024-04-20T21:14:53.577+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dbt_dag_gcp', 'dbt_run', 'manual__2024-04-20T21:14:46.414433+00:00', '--job-id', '242', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dag.py', '--cfg-path', '/tmp/tmpg6537y0d']
+[2024-04-20T21:14:53.584+0000] {standard_task_runner.py:88} INFO - Job 242: Subtask dbt_run
+[2024-04-20T21:14:53.737+0000] {task_command.py:423} INFO - Running <TaskInstance: dbt_dag_gcp.dbt_run manual__2024-04-20T21:14:46.414433+00:00 [running]> on host cead0b1f6896
+[2024-04-20T21:14:54.005+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_dag_gcp' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2024-04-20T21:14:46.414433+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-20T21:14:46.414433+00:00'
+[2024-04-20T21:14:54.009+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-04-20T21:14:54.013+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dags/dbt/***_dbt_gcp && dbt run --profiles-dir .']
+[2024-04-20T21:14:54.060+0000] {subprocess.py:86} INFO - Output:
+[2024-04-20T21:15:05.185+0000] {subprocess.py:93} INFO - [0m21:15:05  Running with dbt=1.7.10
+[2024-04-20T21:15:09.717+0000] {subprocess.py:93} INFO - [0m21:15:09  Registered adapter: bigquery=1.7.6
+[2024-04-20T21:15:09.785+0000] {subprocess.py:93} INFO - [0m21:15:09  Unable to do partial parsing because profile has changed
+[2024-04-20T21:15:14.330+0000] {subprocess.py:93} INFO - [0m21:15:14  Found 5 models, 10 tests, 1 source, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[2024-04-20T21:15:14.336+0000] {subprocess.py:93} INFO - [0m21:15:14
+[2024-04-20T21:15:16.567+0000] {subprocess.py:93} INFO - [0m21:15:16  Concurrency: 2 threads (target='dev')
+[2024-04-20T21:15:16.569+0000] {subprocess.py:93} INFO - [0m21:15:16
+[2024-04-20T21:15:16.584+0000] {subprocess.py:93} INFO - [0m21:15:16  1 of 5 START sql table model retail.dim_stock .................................. [RUN]
+[2024-04-20T21:15:16.587+0000] {subprocess.py:93} INFO - [0m21:15:16  2 of 5 START sql table model retail.fact_purchase .............................. [RUN]
+[2024-04-20T21:15:20.752+0000] {subprocess.py:93} INFO - [0m21:15:20  BigQuery adapter: https://console.cloud.google.com/bigquery?project=***-tutorial-418113&j=bq:US:8f8a12a1-86ea-47d1-b546-85d03853ebf3&page=queryresults
+[2024-04-20T21:15:20.831+0000] {subprocess.py:93} INFO - [0m21:15:20  1 of 5 OK created sql table model retail.dim_stock ............................. [[32mCREATE TABLE (4.1k rows, 3.7 MiB processed)[0m in 4.24s]
+[2024-04-20T21:15:20.842+0000] {subprocess.py:93} INFO - [0m21:15:20  3 of 5 START sql table model retail.my_first_dbt_model ......................... [RUN]
+[2024-04-20T21:15:20.854+0000] {subprocess.py:93} INFO - [0m21:15:20  2 of 5 ERROR creating sql table model retail.fact_purchase ..................... [[31mERROR[0m in 4.26s]
+[2024-04-20T21:15:20.876+0000] {subprocess.py:93} INFO - [0m21:15:20  4 of 5 START sql view model retail_finance.revenue_by_day ...................... [RUN]
+[2024-04-20T21:15:24.132+0000] {subprocess.py:93} INFO - [0m21:15:24  BigQuery adapter: https://console.cloud.google.com/bigquery?project=***-tutorial-418113&j=bq:US:0ab0c2d5-5d30-48c8-ae53-86b9d5e4524b&page=queryresults
+[2024-04-20T21:15:24.143+0000] {subprocess.py:93} INFO - [0m21:15:24  4 of 5 ERROR creating sql view model retail_finance.revenue_by_day ............. [[31mERROR[0m in 3.26s]
+[2024-04-20T21:15:25.681+0000] {subprocess.py:93} INFO - [0m21:15:25  3 of 5 OK created sql table model retail.my_first_dbt_model .................... [[32mCREATE TABLE (1.0 rows, 0 processed)[0m in 4.83s]
+[2024-04-20T21:15:25.691+0000] {subprocess.py:93} INFO - [0m21:15:25  5 of 5 START sql view model retail.my_second_dbt_model ......................... [RUN]
+[2024-04-20T21:15:27.933+0000] {subprocess.py:93} INFO - [0m21:15:27  5 of 5 OK created sql view model retail.my_second_dbt_model .................... [[32mCREATE VIEW (0 processed)[0m in 2.24s]
+[2024-04-20T21:15:27.956+0000] {subprocess.py:93} INFO - [0m21:15:27
+[2024-04-20T21:15:27.958+0000] {subprocess.py:93} INFO - [0m21:15:27  Finished running 3 table models, 2 view models in 0 hours 0 minutes and 13.61 seconds (13.61s).
+[2024-04-20T21:15:28.010+0000] {subprocess.py:93} INFO - [0m21:15:28
+[2024-04-20T21:15:28.011+0000] {subprocess.py:93} INFO - [0m21:15:28  [31mCompleted with 2 errors and 0 warnings:[0m
+[2024-04-20T21:15:28.013+0000] {subprocess.py:93} INFO - [0m21:15:28
+[2024-04-20T21:15:28.015+0000] {subprocess.py:93} INFO - [0m21:15:28    Database Error in model fact_purchase (models/silver/fact_purchase.sql)
+[2024-04-20T21:15:28.015+0000] {subprocess.py:93} INFO -   Table-valued function not found: source at [20:6]
+[2024-04-20T21:15:28.016+0000] {subprocess.py:93} INFO -   compiled Code at target/run/***_dbt_gcp/models/silver/fact_purchase.sql
+[2024-04-20T21:15:28.016+0000] {subprocess.py:93} INFO - [0m21:15:28
+[2024-04-20T21:15:28.017+0000] {subprocess.py:93} INFO - [0m21:15:28    Database Error in model revenue_by_day (models/gold/revenue_by_day.sql)
+[2024-04-20T21:15:28.018+0000] {subprocess.py:93} INFO -   Table-valued function not found: source at [12:6]
+[2024-04-20T21:15:28.018+0000] {subprocess.py:93} INFO -   compiled Code at target/run/***_dbt_gcp/models/gold/revenue_by_day.sql
+[2024-04-20T21:15:28.019+0000] {subprocess.py:93} INFO - [0m21:15:28
+[2024-04-20T21:15:28.021+0000] {subprocess.py:93} INFO - [0m21:15:28  Done. PASS=3 WARN=0 ERROR=2 SKIP=0 TOTAL=5
+[2024-04-20T21:15:30.227+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-04-20T21:15:30.266+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-04-20T21:15:30.276+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=dbt_dag_gcp, task_id=dbt_run, execution_date=20240420T211446, start_date=20240420T211453, end_date=20240420T211530
+[2024-04-20T21:15:30.325+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 242 for task dbt_run (Bash command failed. The command returned a non-zero exit code 1.; 244)
+[2024-04-20T21:15:30.352+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-20T21:15:30.424+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

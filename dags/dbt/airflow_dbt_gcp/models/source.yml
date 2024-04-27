@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: airflow_dbt
+    database: airflow-tutorial-418113
+    schema: retail
+    tables:
+      - name: retail
