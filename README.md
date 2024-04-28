@@ -18,9 +18,22 @@ In this project, we showcase a comprehensive data pipeline that incorporates the
 # How to Use
 To explore this project, refer to the provided documentation or setup instructions for guidance on configuring Airflow DAGs, dbt models, and connecting to BigQuery. Follow the step-by-step instructions to run the data pipeline and analyze the results. 
 ## Installing Dependencies
-As we mention before, there are some key tools/dependencies that we need to install
+As we mention before, there are some key tools/dependencies that we need to install.
 ### Apache Airflow
-Follow the instructions in [apache aiflow](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html) installing guide. We recommend to install docker and docker compose first before installing airflow.
+Follow the instructions in [apache aiflow](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html) installing guide. We recommend to install docker and docker compose first before installing airflow. 
 
-NOTE: while you following the instruction, make a folder named `include`. It will stored some data that will use in the project like `dataset.csv` and `service_account.json` for connect to bigquery.
+NOTE: After you following the instruction, make a folder named `include/` in your project folder. It will store some data that will be used in the project such as `dataset.csv` and `service_account.json` to connect to bigquery. Add your `include/` folder in `docker-compose.yaml` volumes
+
+```
+volumes:
+    - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
+    - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
+    - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
+    - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+    - ${AIRFLOW_PROJ_DIR:-.}/include:/opt/airflow/include
+```
 ### Airflow Google Providers 
+Installing google providers with running `pip install apache-airflow-providers-google`. This package will help us connecting into bigquery.
+
+### DBT (Data Build Tool)
+Installing DBT with running `pip install dbt-core dbt-bigquery`. This package will help us transform and modeling the data.
