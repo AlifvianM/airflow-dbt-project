@@ -493,3 +493,66 @@
 [2024-04-27T20:13:09.372+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:13:09.371+0000] {dag.py:3047} INFO - Sync 1 DAGs
 [2024-04-27T20:13:09.420+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:13:09.419+0000] {dag.py:3834} INFO - Setting next_dagrun for dbt_dag_gcp to 2024-04-27 00:00:00+00:00, run_after=2024-04-28 00:00:00+00:00
 [2024-04-27T20:13:09.460+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_dag.py took 0.180 seconds
+[2024-04-27T20:13:39.663+0000] {processor.py:161} INFO - Started process (PID=507) to work on /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:13:39.664+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_dag.py for tasks to queue
+[2024-04-27T20:13:39.668+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:13:39.667+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:13:39.672+0000] {logging_mixin.py:188} INFO - CURRENT_DIR : /opt/airflow
+[2024-04-27T20:13:39.673+0000] {logging_mixin.py:188} INFO - DBT_DIR : /opt/airflow/dags/dbt/airflow_dbt_gcp
+[2024-04-27T20:13:39.691+0000] {processor.py:840} INFO - DAG(s) 'dbt_dag_gcp' retrieved from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:13:39.742+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:13:39.741+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:13:39.791+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:13:39.790+0000] {dag.py:3834} INFO - Setting next_dagrun for dbt_dag_gcp to 2024-04-27 00:00:00+00:00, run_after=2024-04-28 00:00:00+00:00
+[2024-04-27T20:13:39.832+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_dag.py took 0.174 seconds
+[2024-04-27T20:14:10.056+0000] {processor.py:161} INFO - Started process (PID=515) to work on /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:14:10.061+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_dag.py for tasks to queue
+[2024-04-27T20:14:10.064+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:10.064+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:14:10.068+0000] {logging_mixin.py:188} INFO - CURRENT_DIR : /opt/airflow
+[2024-04-27T20:14:10.069+0000] {logging_mixin.py:188} INFO - DBT_DIR : /opt/airflow/dags/dbt/airflow_dbt_gcp
+[2024-04-27T20:14:10.086+0000] {processor.py:840} INFO - DAG(s) 'dbt_dag_gcp' retrieved from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:14:10.135+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:10.134+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:14:10.201+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:10.200+0000] {dag.py:3834} INFO - Setting next_dagrun for dbt_dag_gcp to 2024-04-27 00:00:00+00:00, run_after=2024-04-28 00:00:00+00:00
+[2024-04-27T20:14:10.238+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_dag.py took 0.188 seconds
+[2024-04-27T20:14:40.451+0000] {processor.py:161} INFO - Started process (PID=523) to work on /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:14:40.454+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_dag.py for tasks to queue
+[2024-04-27T20:14:40.457+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:40.457+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:14:40.461+0000] {logging_mixin.py:188} INFO - CURRENT_DIR : /opt/airflow
+[2024-04-27T20:14:40.462+0000] {logging_mixin.py:188} INFO - DBT_DIR : /opt/airflow/dags/dbt/airflow_dbt_gcp
+[2024-04-27T20:14:40.485+0000] {processor.py:840} INFO - DAG(s) 'dbt_dag_gcp' retrieved from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:14:40.540+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:40.539+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:14:40.598+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:40.597+0000] {dag.py:3834} INFO - Setting next_dagrun for dbt_dag_gcp to 2024-04-27 00:00:00+00:00, run_after=2024-04-28 00:00:00+00:00
+[2024-04-27T20:14:40.642+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_dag.py took 0.197 seconds
+[2024-04-27T20:15:10.863+0000] {processor.py:161} INFO - Started process (PID=531) to work on /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:15:10.866+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_dag.py for tasks to queue
+[2024-04-27T20:15:10.870+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:10.869+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:15:10.873+0000] {logging_mixin.py:188} INFO - CURRENT_DIR : /opt/airflow
+[2024-04-27T20:15:10.874+0000] {logging_mixin.py:188} INFO - DBT_DIR : /opt/airflow/dags/dbt/airflow_dbt_gcp
+[2024-04-27T20:15:10.891+0000] {processor.py:840} INFO - DAG(s) 'dbt_dag_gcp' retrieved from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:15:10.934+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:10.934+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:15:10.994+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:10.992+0000] {dag.py:3834} INFO - Setting next_dagrun for dbt_dag_gcp to 2024-04-27 00:00:00+00:00, run_after=2024-04-28 00:00:00+00:00
+[2024-04-27T20:15:11.037+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_dag.py took 0.178 seconds
+[2024-04-27T20:15:41.262+0000] {processor.py:161} INFO - Started process (PID=539) to work on /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:15:41.263+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_dag.py for tasks to queue
+[2024-04-27T20:15:41.269+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:41.267+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:15:41.276+0000] {logging_mixin.py:188} INFO - CURRENT_DIR : /opt/airflow
+[2024-04-27T20:15:41.276+0000] {logging_mixin.py:188} INFO - DBT_DIR : /opt/airflow/dags/dbt/airflow_dbt_gcp
+[2024-04-27T20:15:41.295+0000] {processor.py:840} INFO - DAG(s) 'dbt_dag_gcp' retrieved from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:15:41.344+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:41.343+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:15:41.393+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:41.393+0000] {dag.py:3834} INFO - Setting next_dagrun for dbt_dag_gcp to 2024-04-27 00:00:00+00:00, run_after=2024-04-28 00:00:00+00:00
+[2024-04-27T20:15:41.432+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_dag.py took 0.176 seconds
+[2024-04-27T20:16:11.498+0000] {processor.py:161} INFO - Started process (PID=547) to work on /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:16:11.500+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_dag.py for tasks to queue
+[2024-04-27T20:16:11.505+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:11.504+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:16:11.509+0000] {logging_mixin.py:188} INFO - CURRENT_DIR : /opt/airflow
+[2024-04-27T20:16:11.509+0000] {logging_mixin.py:188} INFO - DBT_DIR : /opt/airflow/dags/dbt/airflow_dbt_gcp
+[2024-04-27T20:16:11.528+0000] {processor.py:840} INFO - DAG(s) 'dbt_dag_gcp' retrieved from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:16:11.591+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:11.590+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:16:11.674+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:11.673+0000] {dag.py:3834} INFO - Setting next_dagrun for dbt_dag_gcp to 2024-04-27 00:00:00+00:00, run_after=2024-04-28 00:00:00+00:00
+[2024-04-27T20:16:11.717+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_dag.py took 0.227 seconds
+[2024-04-27T20:16:41.950+0000] {processor.py:161} INFO - Started process (PID=555) to work on /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:16:41.952+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_dag.py for tasks to queue
+[2024-04-27T20:16:41.957+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:41.956+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:16:41.962+0000] {logging_mixin.py:188} INFO - CURRENT_DIR : /opt/airflow
+[2024-04-27T20:16:41.963+0000] {logging_mixin.py:188} INFO - DBT_DIR : /opt/airflow/dags/dbt/airflow_dbt_gcp
+[2024-04-27T20:16:41.993+0000] {processor.py:840} INFO - DAG(s) 'dbt_dag_gcp' retrieved from /opt/airflow/dags/dbt_dag.py
+[2024-04-27T20:16:42.050+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:42.049+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:16:42.122+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:42.122+0000] {dag.py:3834} INFO - Setting next_dagrun for dbt_dag_gcp to 2024-04-27 00:00:00+00:00, run_after=2024-04-28 00:00:00+00:00
+[2024-04-27T20:16:42.190+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_dag.py took 0.249 seconds

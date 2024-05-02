@@ -33,7 +33,7 @@ with DAG(
 
     test_dbt = BashOperator(
         task_id="dbt_test",
-        bash_command=f"cd {DBT_DIR} && dbt run --profiles-dir ."
+        bash_command=f"cd {DBT_DIR} && dbt test --profiles-dir ."
     )
 
     push_dir >> run_dbt >> test_dbt

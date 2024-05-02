@@ -383,3 +383,52 @@
 [2024-04-27T20:13:09.372+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:13:09.371+0000] {dag.py:3047} INFO - Sync 1 DAGs
 [2024-04-27T20:13:09.397+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:13:09.396+0000] {dag.py:3834} INFO - Setting next_dagrun for retail_dag to None, run_after=None
 [2024-04-27T20:13:09.433+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retail.py took 0.140 seconds
+[2024-04-27T20:13:39.676+0000] {processor.py:161} INFO - Started process (PID=508) to work on /opt/airflow/dags/retail.py
+[2024-04-27T20:13:39.677+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retail.py for tasks to queue
+[2024-04-27T20:13:39.680+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:13:39.680+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retail.py
+[2024-04-27T20:13:39.704+0000] {processor.py:840} INFO - DAG(s) 'retail_dag' retrieved from /opt/airflow/dags/retail.py
+[2024-04-27T20:13:39.756+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:13:39.755+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:13:39.779+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:13:39.779+0000] {dag.py:3834} INFO - Setting next_dagrun for retail_dag to None, run_after=None
+[2024-04-27T20:13:39.820+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retail.py took 0.149 seconds
+[2024-04-27T20:14:10.067+0000] {processor.py:161} INFO - Started process (PID=516) to work on /opt/airflow/dags/retail.py
+[2024-04-27T20:14:10.069+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retail.py for tasks to queue
+[2024-04-27T20:14:10.074+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:10.074+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retail.py
+[2024-04-27T20:14:10.094+0000] {processor.py:840} INFO - DAG(s) 'retail_dag' retrieved from /opt/airflow/dags/retail.py
+[2024-04-27T20:14:10.142+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:10.141+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:14:10.182+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:10.181+0000] {dag.py:3834} INFO - Setting next_dagrun for retail_dag to None, run_after=None
+[2024-04-27T20:14:10.218+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retail.py took 0.155 seconds
+[2024-04-27T20:14:40.465+0000] {processor.py:161} INFO - Started process (PID=524) to work on /opt/airflow/dags/retail.py
+[2024-04-27T20:14:40.466+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retail.py for tasks to queue
+[2024-04-27T20:14:40.469+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:40.469+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retail.py
+[2024-04-27T20:14:40.494+0000] {processor.py:840} INFO - DAG(s) 'retail_dag' retrieved from /opt/airflow/dags/retail.py
+[2024-04-27T20:14:40.554+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:40.552+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:14:40.584+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:14:40.583+0000] {dag.py:3834} INFO - Setting next_dagrun for retail_dag to None, run_after=None
+[2024-04-27T20:14:40.626+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retail.py took 0.168 seconds
+[2024-04-27T20:15:10.875+0000] {processor.py:161} INFO - Started process (PID=532) to work on /opt/airflow/dags/retail.py
+[2024-04-27T20:15:10.877+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retail.py for tasks to queue
+[2024-04-27T20:15:10.881+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:10.880+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retail.py
+[2024-04-27T20:15:10.899+0000] {processor.py:840} INFO - DAG(s) 'retail_dag' retrieved from /opt/airflow/dags/retail.py
+[2024-04-27T20:15:10.941+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:10.940+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:15:10.970+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:10.970+0000] {dag.py:3834} INFO - Setting next_dagrun for retail_dag to None, run_after=None
+[2024-04-27T20:15:11.022+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retail.py took 0.153 seconds
+[2024-04-27T20:15:41.281+0000] {processor.py:161} INFO - Started process (PID=540) to work on /opt/airflow/dags/retail.py
+[2024-04-27T20:15:41.282+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retail.py for tasks to queue
+[2024-04-27T20:15:41.286+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:41.285+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retail.py
+[2024-04-27T20:15:41.308+0000] {processor.py:840} INFO - DAG(s) 'retail_dag' retrieved from /opt/airflow/dags/retail.py
+[2024-04-27T20:15:41.360+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:41.358+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:15:41.384+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:15:41.384+0000] {dag.py:3834} INFO - Setting next_dagrun for retail_dag to None, run_after=None
+[2024-04-27T20:15:41.420+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retail.py took 0.152 seconds
+[2024-04-27T20:16:11.510+0000] {processor.py:161} INFO - Started process (PID=548) to work on /opt/airflow/dags/retail.py
+[2024-04-27T20:16:11.513+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retail.py for tasks to queue
+[2024-04-27T20:16:11.516+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:11.515+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retail.py
+[2024-04-27T20:16:11.540+0000] {processor.py:840} INFO - DAG(s) 'retail_dag' retrieved from /opt/airflow/dags/retail.py
+[2024-04-27T20:16:11.614+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:11.612+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:16:11.656+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:11.655+0000] {dag.py:3834} INFO - Setting next_dagrun for retail_dag to None, run_after=None
+[2024-04-27T20:16:11.704+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retail.py took 0.200 seconds
+[2024-04-27T20:16:41.967+0000] {processor.py:161} INFO - Started process (PID=556) to work on /opt/airflow/dags/retail.py
+[2024-04-27T20:16:41.968+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retail.py for tasks to queue
+[2024-04-27T20:16:41.972+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:41.972+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retail.py
+[2024-04-27T20:16:42.007+0000] {processor.py:840} INFO - DAG(s) 'retail_dag' retrieved from /opt/airflow/dags/retail.py
+[2024-04-27T20:16:42.066+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:42.064+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-04-27T20:16:42.105+0000] {logging_mixin.py:188} INFO - [2024-04-27T20:16:42.105+0000] {dag.py:3834} INFO - Setting next_dagrun for retail_dag to None, run_after=None
+[2024-04-27T20:16:42.163+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retail.py took 0.206 seconds
